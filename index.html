@@ -180,10 +180,10 @@
   }
   .cause-image-wrap {
     position: relative;
-    height: 340px;
     overflow: hidden;
   }
   .cause-image {
+    position: absolute; inset: 0;
     width: 100%; height: 100%;
     object-fit: cover;
     object-position: center 40%;
@@ -191,25 +191,25 @@
     filter: brightness(0.4);
   }
   .cause-image-overlay {
-    position: absolute; inset: 0;
+    position: relative;
     background: linear-gradient(to right, rgba(26,61,43,0.92) 0%, rgba(26,61,43,0.5) 100%);
-    display: flex; align-items: center;
-    padding: 3rem;
+    display: flex; align-items: flex-start;
+    padding: 2.5rem 4rem 2.5rem 6rem;
   }
-  .cause-image-text { max-width: 600px; }
+  .cause-image-text { max-width: 680px; }
   .cause-image-text .section-eyebrow { color: var(--gold-light); }
   .cause-image-text .section-title { color: var(--white); }
   .cause-image-text .section-title .accent { color: var(--gold); }
   .cause-image-text .divider { background: var(--gold); }
   .cause-image-text p { color: rgba(255,255,255,0.75); font-size: 1.05rem; line-height: 1.8; margin-top: 1rem; }
 
-  .cause-cards { background: var(--green-dark); padding: 3rem 2rem; }
+  .cause-cards { background: var(--green-dark); padding: 2rem 2rem 1.5rem; }
   .impact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto 2.5rem; }
   .impact-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 2rem 1.5rem; text-align: center; position: relative; overflow: hidden; }
   .impact-card::before { content: ''; position: absolute; top: -30px; right: -30px; width: 80px; height: 80px; background: rgba(201,168,76,0.06); border-radius: 50%; }
   .impact-amount { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem; }
   .impact-label { font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.5; }
-  .cause-cta { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--white); font-style: italic; text-align: center; padding-top: 2rem; max-width: 1100px; margin: 0 auto; }
+  .cause-cta { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--white); font-style: italic; text-align: center; padding-top: 1rem; max-width: 1100px; margin: 0 auto; }
 
   /* HOLE IN ONE */
   .hole-in-one {
@@ -474,7 +474,7 @@
   </div>
   <div class="cause-cards">
     <div style="max-width:1100px; margin:0 auto;">
-      <p style="font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:700; color:rgba(255,255,255,0.9); margin-bottom:2rem; text-align:center;">Here's the impact of every dollar raised through the 2027 Reach Charity Golf Tournament.</p>
+      <p style="font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:700; color:rgba(255,255,255,0.9); margin-bottom:1.25rem; text-align:center;">Here's the impact of every dollar raised through the 2027 Reach Charity Golf Tournament.</p>
       <div style="display:flex; align-items:flex-start; gap:0; position:relative;">
 
         <!-- connector lines -->
@@ -501,7 +501,7 @@
       </div>
     </div>
     <p class="cause-cta">"Every swing. Every dollar. Every life changed."</p>
-    <div style="text-align:center; margin-top:2rem;">
+    <div style="text-align:center; margin-top:1.25rem;">
       <a href="sponsor-form.html" class="btn-gold" style="font-size:0.95rem; padding:0.85rem 2.5rem;">Sponsor Now →</a>
     </div>
   </div>
