@@ -101,7 +101,9 @@
   .add-card-top { display: flex; justify-content: space-between; align-items: center; }
   .add-name { font-size: 0.88rem; font-weight: 500; color: var(--text-dark); }
   .add-price { font-size: 0.88rem; font-weight: 700; color: var(--green-mid); white-space: nowrap; }
-  .add-cta { display: block; padding: 0.75rem; text-align: center; border-radius: 5px; font-size: 0.88rem; font-weight: 600; background: var(--gray-light); color: var(--text-light); cursor: default; }
+  .add-cta { display: block; padding: 0.75rem; text-align: center; border-radius: 5px; font-size: 0.88rem; font-weight: 600; background: var(--gray-light); color: var(--text-light); cursor: default; text-decoration: none; }
+  .add-cta.active { background: var(--gold); color: var(--green-dark); cursor: pointer; }
+  .add-cta.active:hover { background: var(--gold-light); }
 
   /* CONTACT BLOCK */
   .contact-block { text-align: center; background: var(--green-dark); border-radius: 10px; padding: 2rem; color: white; }
@@ -136,7 +138,7 @@
   <div class="tier-grid">
 
     <!-- TITLE -->
-    <div class="tier-card coming-soon">
+    <div class="tier-card">
       <div class="tier-header bg-title">
         <div class="tier-header-title">Title Sponsor</div>
         <div class="tier-header-price">$15,000</div>
@@ -153,11 +155,11 @@
           <li>Branded goodie bag items</li>
         </ul>
       </div>
-      <span class="tier-cta soon">Registration Coming Soon</span>
+      <a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="tier-cta active">Register Now →</a>
     </div>
 
     <!-- PLATINUM -->
-    <div class="tier-card coming-soon">
+    <div class="tier-card">
       <div class="tier-header bg-platinum">
         <div class="tier-header-title">Platinum Sponsor</div>
         <div class="tier-header-price">$7,000</div>
@@ -173,11 +175,11 @@
           <li>Reserved dinner table</li>
         </ul>
       </div>
-      <span class="tier-cta soon">Registration Coming Soon</span>
+      <a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="tier-cta active">Register Now →</a>
     </div>
 
     <!-- GOLD -->
-    <div class="tier-card coming-soon">
+    <div class="tier-card">
       <div class="tier-header bg-gold">
         <div class="tier-header-title">Gold Sponsor</div>
         <div class="tier-header-price">$3,500</div>
@@ -192,11 +194,11 @@
           <li>Recognition at start & dinner</li>
         </ul>
       </div>
-      <span class="tier-cta soon">Registration Coming Soon</span>
+      <a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="tier-cta active">Register Now →</a>
     </div>
 
     <!-- SILVER -->
-    <div class="tier-card coming-soon">
+    <div class="tier-card">
       <div class="tier-header bg-silver">
         <div class="tier-header-title">Silver Sponsor</div>
         <div class="tier-header-price">$2,000</div>
@@ -210,11 +212,11 @@
           <li>Recognition at dinner</li>
         </ul>
       </div>
-      <span class="tier-cta soon">Registration Coming Soon</span>
+      <a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="tier-cta active">Register Now →</a>
     </div>
 
     <!-- DINNER -->
-    <div class="tier-card coming-soon">
+    <div class="tier-card">
       <div class="tier-header bg-dinner">
         <div class="tier-header-title">Dinner Sponsor</div>
         <div class="tier-header-price">$1,500</div>
@@ -227,11 +229,11 @@
           <li>Logo in program</li>
         </ul>
       </div>
-      <span class="tier-cta soon">Registration Coming Soon</span>
+      <a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="tier-cta active">Register Now →</a>
     </div>
 
     <!-- LUNCH -->
-    <div class="tier-card coming-soon">
+    <div class="tier-card">
       <div class="tier-header bg-lunch">
         <div class="tier-header-title">Lunch Sponsor</div>
         <div class="tier-header-price">$1,000</div>
@@ -243,11 +245,11 @@
           <li>Social mention</li>
         </ul>
       </div>
-      <span class="tier-cta soon">Registration Coming Soon</span>
+      <a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="tier-cta active">Register Now →</a>
     </div>
 
     <!-- BEVERAGE -->
-    <div class="tier-card coming-soon">
+    <div class="tier-card">
       <div class="tier-header bg-beverage">
         <div class="tier-header-title">Beverage Sponsor</div>
         <div class="tier-header-price">$600</div>
@@ -259,11 +261,11 @@
           <li>Social mention</li>
         </ul>
       </div>
-      <span class="tier-cta soon">Registration Coming Soon</span>
+      <a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="tier-cta active">Register Now →</a>
     </div>
 
     <!-- IN-KIND -->
-    <div class="tier-card coming-soon">
+    <div class="tier-card">
       <div class="tier-header bg-other">
         <div class="tier-header-title">In-Kind Sponsor</div>
         <div class="tier-header-price">Goods / Services</div>
@@ -274,11 +276,11 @@
           <li>Recognition based on value</li>
         </ul>
       </div>
-      <span class="tier-cta soon">Registration Coming Soon</span>
+      <a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="tier-cta active">Register Now →</a>
     </div>
 
     <!-- DONATE -->
-    <div class="tier-card coming-soon">
+    <div class="tier-card">
       <div class="tier-header" style="background: linear-gradient(135deg, #1a3d2b, #2d6a4f);">
         <div class="tier-header-title">Make an Impact</div>
         <div class="tier-header-price">Any Amount</div>
@@ -290,7 +292,7 @@
           <li>Fund student ministries &amp; missions</li>
         </ul>
       </div>
-      <span class="tier-cta soon">Donation Link Coming Soon</span>
+      <a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="tier-cta active">Donate Now →</a>
     </div>
 
   </div>
@@ -299,9 +301,9 @@
   <div class="additional">
     <h3>Additional Sponsorship Opportunities</h3>
     <div class="add-grid">
-      <div class="add-card"><div class="add-card-top"><span class="add-name">Hospitality Sponsor</span><span class="add-price">$600</span></div><span class="add-cta">Registration Coming Soon</span></div>
-      <div class="add-card"><div class="add-card-top"><span class="add-name">Putting Bonanza Sponsor</span><span class="add-price">$500</span></div><span class="add-cta">Registration Coming Soon</span></div>
-      <div class="add-card"><div class="add-card-top"><span class="add-name">Hole Sponsor</span><span class="add-price">$300</span></div><span class="add-cta">Registration Coming Soon</span></div>
+      <div class="add-card"><div class="add-card-top"><span class="add-name">Hospitality Sponsor</span><span class="add-price">$600</span></div><a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="add-cta active">Register Now →</a></div>
+      <div class="add-card"><div class="add-card-top"><span class="add-name">Putting Bonanza Sponsor</span><span class="add-price">$500</span></div><a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="add-cta active">Register Now →</a></div>
+      <div class="add-card"><div class="add-card-top"><span class="add-name">Hole Sponsor</span><span class="add-price">$300</span></div><a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="add-cta active">Register Now →</a></div>
     </div>
   </div>
 
