@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sponsorship Registration · Reach Charity Golf 2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green-dark: #1a3d2b;
+    --green-mid: #2d6a4f;
+    --gold: #c9a84c;
+    --gold-light: #e8cc80;
+    --cream: #f8f4ec;
+    --white: #ffffff;
+    --gray-light: #f4f2ed;
+    --gray-border: #e0ddd8;
+    --text-dark: #1a1a1a;
+    --text-mid: #444;
+    --text-light: #888;
+  }
+  body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text-dark); min-height: 100vh; }
+
+  /* HEADER */
+  .form-header { background: var(--green-dark); padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .form-header a { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 1rem; text-decoration: none; }
+  .form-header-back { color: rgba(255,255,255,0.6); font-size: 0.82rem; text-decoration: none; }
+  .form-header-back:hover { color: var(--gold); }
+
+  /* HERO */
+  .form-hero { background: linear-gradient(135deg, var(--green-dark), #0f2419); color: white; text-align: center; padding: 3rem 2rem; border-bottom: 3px solid var(--gold); }
+  .form-hero p { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; font-weight: 600; }
+  .form-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 0.5rem; }
+  .form-hero .sub { font-size: 0.9rem; color: rgba(255,255,255,0.6); letter-spacing: 0; text-transform: none; margin-top: 0.5rem; font-weight: 400; }
+
+  /* LAYOUT */
+  .page { max-width: 1000px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+  .intro { text-align: center; margin-bottom: 2.5rem; }
+  .intro p { font-size: 1rem; color: var(--text-mid); max-width: 620px; margin: 0 auto; line-height: 1.7; }
+
+  /* TIER GRID */
+  .tier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 2.5rem; }
+
+  .tier-card {
+    background: var(--white);
+    border-radius: 10px;
+    border: 1px solid var(--gray-border);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.15s, box-shadow 0.15s;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .tier-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+  .tier-card.coming-soon { cursor: default; opacity: 0.75; }
+  .tier-card.coming-soon:hover { transform: none; box-shadow: none; }
+
+  .tier-header { padding: 1.25rem 1.5rem; color: var(--white); position: relative; height: 120px; display: flex; flex-direction: column; justify-content: center; }
+  .tier-header-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.2rem; }
+  .tier-header-price { font-size: 1.8rem; font-weight: 700; }
+  .tier-limited { font-size: 0.65rem; letter-spacing: 0.08em; opacity: 0.8; margin-top: 0.2rem; }
+
+  .bg-title    { background: #1B2A4A; }
+  .bg-platinum { background: #4A3F6B; }
+  .bg-gold     { background: #B5622A; }
+  .bg-silver   { background: #2E5F7A; }
+  .bg-dinner   { background: #1a3d2b; }
+  .bg-lunch    { background: #1a3d2b; }
+  .bg-beverage { background: #1a3d2b; }
+  .bg-other    { background: #1a3d2b; }
+
+  .tier-body { padding: 1.25rem 1.5rem; flex: 1; }
+  .tier-perks { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.25rem; }
+  .tier-perks li { font-size: 0.82rem; color: var(--text-mid); display: flex; align-items: flex-start; gap: 0.5rem; }
+  .tier-perks li::before { content: '✓'; color: var(--green-mid); font-weight: 700; font-size: 0.8rem; flex-shrink: 0; margin-top: 1px; }
+  .tier-perks li.sub-bullet::before { content: '•'; color: var(--text-mid); font-weight: 400; font-size: 1rem; margin-top: -1px; }
+
+  .tier-cta {
+    display: block;
+    margin: 0 1.5rem 1.5rem;
+    padding: 0.75rem;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .tier-cta.active { background: var(--gold); color: var(--green-dark); }
+  .tier-cta.active:hover { background: var(--gold-light); }
+  .tier-cta.soon { background: var(--gray-light); color: var(--text-light); cursor: default; }
+
+  /* ADDITIONAL TIERS */
+  .additional { background: var(--white); border-radius: 10px; border: 1px solid var(--gray-border); padding: 2rem; margin-bottom: 2.5rem; }
+  .additional h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--green-dark); margin-bottom: 1.25rem; }
+  .add-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; }
+  .add-card { border: 1px solid var(--gray-border); border-radius: 6px; padding: 0.85rem 1rem; display: flex; flex-direction: column; gap: 0.4rem; }
+  .add-card-top { display: flex; justify-content: space-between; align-items: center; }
+  .add-name { font-size: 0.88rem; font-weight: 500; color: var(--text-dark); }
+  .add-price { font-size: 0.88rem; font-weight: 700; color: var(--green-mid); white-space: nowrap; }
+  .add-cta { display: block; padding: 0.75rem; text-align: center; border-radius: 5px; font-size: 0.88rem; font-weight: 600; background: var(--gray-light); color: var(--text-light); cursor: default; text-decoration: none; }
+  .add-cta.active { background: var(--gold); color: var(--green-dark); cursor: pointer; }
+  .add-cta.active:hover { background: var(--gold-light); }
+
+  /* CONTACT BLOCK */
+  .contact-block { text-align: center; background: var(--green-dark); border-radius: 10px; padding: 2rem; color: white; }
+  .contact-block p { font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-bottom: 0.35rem; }
+  .contact-block a { color: var(--gold); text-decoration: none; }
+  .contact-block strong { color: white; }
+
+  @media (max-width: 600px) {
+    .tier-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="form-header">
+  <a href="index.html"></a>
+  <a href="index.html" class="form-header-back">← Back to Website</a>
+</div>
+
+<div class="form-hero">
+  <p>2027 Reach Charity Golf Tournament · February 22, 2027</p>
+  <h1>Sponsorship Opportunities</h1>
+  <div class="sub">Highland Pines Golf Club · Porter, TX</div>
+</div>
+
+<div class="page">
+
+  <div class="intro">
+    <p>Sponsoring the 2027 Reach Charity Golf Tournament is a powerful way to make a visible impact while connecting your brand with a community that gives back. Select a sponsorship level below to register.</p>
+  </div>
+
+  <div class="tier-grid">
+
+    <!-- TITLE -->
+    <div class="tier-card">
+      <div class="tier-header bg-title">
+        <div class="tier-header-title">Title Sponsor</div>
+        <div class="tier-header-price">$15,000</div>
+        <div class="tier-limited">★ Limited Availability</div>
+      </div>
+      <div class="tier-body">
+        <ul class="tier-perks">
+          <li>3 Teams (12 golfers)</li>
+          <li>Custom gift per golfer</li>
+          <li>All-hole signage</li>
+          <li>Logo on social media, banner &amp; program</li>
+          <li>Special recognition at start & dinner</li>
+          <li>Reserved dinner table</li>
+          <li>Branded goodie bag items</li>
+        </ul>
+      </div>
+      <a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="tier-cta active">Register Now →</a>
+    </div>
+
+    <!-- PLATINUM -->
+    <div class="tier-card">
+      <div class="tier-header bg-platinum">
+        <div class="tier-header-title">Platinum Sponsor</div>
+        <div class="tier-header-price">$7,000</div>
+        <div class="tier-limited">★ Limited Availability</div>
+      </div>
+      <div class="tier-body">
+        <ul class="tier-perks">
+          <li>2 Teams (8 golfers)</li>
+          <li>Custom gift per golfer</li>
+          <li>3-hole signage</li>
+          <li>Logo on social media, banner &amp; program</li>
+          <li>Recognition at start & dinner</li>
+          <li>Reserved dinner table</li>
+        </ul>
+      </div>
+      <a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="tier-cta active">Register Now →</a>
+    </div>
+
+    <!-- GOLD -->
+    <div class="tier-card">
+      <div class="tier-header bg-gold">
+        <div class="tier-header-title">Gold Sponsor</div>
+        <div class="tier-header-price">$3,500</div>
+        <div class="tier-limited">★ Limited Availability</div>
+      </div>
+      <div class="tier-body">
+        <ul class="tier-perks">
+          <li>2 Teams (8 golfers)</li>
+          <li>Custom gift per golfer</li>
+          <li>3-hole signage</li>
+          <li>Logo on social media, banner &amp; program</li>
+          <li>Recognition at start & dinner</li>
+        </ul>
+      </div>
+      <a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="tier-cta active">Register Now →</a>
+    </div>
+
+    <!-- SILVER -->
+    <div class="tier-card">
+      <div class="tier-header bg-silver">
+        <div class="tier-header-title">Silver Sponsor</div>
+        <div class="tier-header-price">$2,000</div>
+        <div class="tier-limited">★ Limited Availability</div>
+      </div>
+      <div class="tier-body">
+        <ul class="tier-perks">
+          <li>1 Team (4 golfers)</li>
+          <li>1-hole signage</li>
+          <li>Logo on social media, banner &amp; program</li>
+          <li>Recognition at dinner</li>
+        </ul>
+      </div>
+      <a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="tier-cta active">Register Now →</a>
+    </div>
+
+    <!-- DINNER -->
+    <div class="tier-card">
+      <div class="tier-header bg-dinner">
+        <div class="tier-header-title">Dinner Sponsor</div>
+        <div class="tier-header-price">$1,500</div>
+      </div>
+      <div class="tier-body">
+        <ul class="tier-perks">
+          <li>1 Team (4 golfers)</li>
+          <li>Signage at meal station</li>
+          <li>Announced at dinner</li>
+          <li>Logo in program</li>
+        </ul>
+      </div>
+      <a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="tier-cta active">Register Now →</a>
+    </div>
+
+    <!-- LUNCH -->
+    <div class="tier-card">
+      <div class="tier-header bg-lunch">
+        <div class="tier-header-title">Lunch Sponsor</div>
+        <div class="tier-header-price">$1,000</div>
+      </div>
+      <div class="tier-body">
+        <ul class="tier-perks">
+          <li>Branded cart signage</li>
+          <li>Logo in program</li>
+          <li>Social mention</li>
+        </ul>
+      </div>
+      <a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="tier-cta active">Register Now →</a>
+    </div>
+
+    <!-- BEVERAGE -->
+    <div class="tier-card">
+      <div class="tier-header bg-beverage">
+        <div class="tier-header-title">Beverage Sponsor</div>
+        <div class="tier-header-price">$600</div>
+      </div>
+      <div class="tier-body">
+        <ul class="tier-perks">
+          <li>Branded cart signage</li>
+          <li>Logo in program</li>
+          <li>Social mention</li>
+        </ul>
+      </div>
+      <a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="tier-cta active">Register Now →</a>
+    </div>
+
+    <!-- IN-KIND -->
+    <div class="tier-card">
+      <div class="tier-header bg-other">
+        <div class="tier-header-title">In-Kind Sponsor</div>
+        <div class="tier-header-price">Goods / Services</div>
+      </div>
+      <div class="tier-body">
+        <ul class="tier-perks">
+          <li>Logo in program</li>
+          <li>Recognition based on value</li>
+        </ul>
+      </div>
+      <a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="tier-cta active">Register Now →</a>
+    </div>
+
+    <!-- DONATE -->
+    <div class="tier-card">
+      <div class="tier-header" style="background: linear-gradient(135deg, #1a3d2b, #2d6a4f);">
+        <div class="tier-header-title">Make an Impact</div>
+        <div class="tier-header-price">Any Amount</div>
+        <div class="tier-limited">Give a little, help a lot</div>
+      </div>
+      <div class="tier-body">
+        <ul class="tier-perks">
+          <li>Support Reach Conference scholarships</li>
+          <li>Fund student ministries &amp; missions</li>
+        </ul>
+      </div>
+      <a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="tier-cta active">Donate Now →</a>
+    </div>
+
+  </div>
+
+  <!-- ADDITIONAL TIERS -->
+  <div class="additional">
+    <h3>Additional Sponsorship Opportunities</h3>
+    <div class="add-grid">
+      <div class="add-card"><div class="add-card-top"><span class="add-name">Hospitality Sponsor</span><span class="add-price">$600</span></div><a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="add-cta active">Register Now →</a></div>
+      <div class="add-card"><div class="add-card-top"><span class="add-name">Putting Bonanza Sponsor</span><span class="add-price">$500</span></div><a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="add-cta active">Register Now →</a></div>
+      <div class="add-card"><div class="add-card-top"><span class="add-name">Hole Sponsor</span><span class="add-price">$300</span></div><a href="https://brushfire.com/twotwenty/2027golf/634402" target="_blank" rel="noopener" class="add-cta active">Register Now →</a></div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-block">
+    <p><strong>Questions about sponsorship?</strong></p>
+    <p>Contact Amy L. Taylor · <a href="tel:2819482495">281.948.2495</a> · <a href="mailto:golf@declaration.org">golf@declaration.org</a></p>
+  </div>
+
+</div>
+</body>
+</html>
