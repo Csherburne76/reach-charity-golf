@@ -1,0 +1,62 @@
+From 4b889e1379a8fb9e2c8185194b4d64bd076692ec Mon Sep 17 00:00:00 2001
+From: Chelsea Sherburne <info@reachcharitygolf.org>
+Date: Tue, 21 Jul 2026 19:23:54 +0000
+Subject: [PATCH] Update contact email to info@reachcharitygolf.org
+
+---
+ index.html          | 4 ++--
+ sponsor-form-9.html | 2 +-
+ sponsor-form.html   | 2 +-
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/index.html b/index.html
+index 7be7d0a..c62c95e 100644
+--- a/index.html
++++ b/index.html
+@@ -433,7 +433,7 @@
+           <p><strong>Questions? Contact:</strong></p>
+           <p>Amy L. Taylor</p>
+           <p><a href="tel:2819482495">281.948.2495</a></p>
+-          <p><a href="mailto:golf@declaration.org">golf@declaration.org</a></p>
++          <p><a href="mailto:info@reachcharitygolf.org">info@reachcharitygolf.org</a></p>
+         </div>
+       </div>
+       <div>
+@@ -578,7 +578,7 @@
+ <footer>
+   <div class="footer-logo">2027 Reach Charity Golf Tournament</div>
+   <p>Highland Pines Golf Club · February 22, 2027 · Porter, TX</p>
+-  <p style="margin-top:0.75rem;">Questions? Contact Amy L. Taylor · <a href="tel:2819482495">281.948.2495</a> · <a href="mailto:golf@declaration.org">golf@declaration.org</a></p>
++  <p style="margin-top:0.75rem;">Questions? Contact Amy L. Taylor · <a href="tel:2819482495">281.948.2495</a> · <a href="mailto:info@reachcharitygolf.org">info@reachcharitygolf.org</a></p>
+   <p style="margin-top:1.5rem; font-size:0.78rem; opacity:0.5;">All proceeds benefit the Reach Conference · reachcharitygolf.org</p>
+ </footer>
+ 
+diff --git a/sponsor-form-9.html b/sponsor-form-9.html
+index 44ad0ef..6d50ec3 100644
+--- a/sponsor-form-9.html
++++ b/sponsor-form-9.html
+@@ -310,7 +310,7 @@
+   <!-- CONTACT -->
+   <div class="contact-block">
+     <p><strong>Questions about sponsorship?</strong></p>
+-    <p>Contact Amy L. Taylor · <a href="tel:2819482495">281.948.2495</a> · <a href="mailto:golf@declaration.org">golf@declaration.org</a></p>
++    <p>Contact Amy L. Taylor · <a href="tel:2819482495">281.948.2495</a> · <a href="mailto:info@reachcharitygolf.org">info@reachcharitygolf.org</a></p>
+   </div>
+ 
+ </div>
+diff --git a/sponsor-form.html b/sponsor-form.html
+index 44ad0ef..6d50ec3 100644
+--- a/sponsor-form.html
++++ b/sponsor-form.html
+@@ -310,7 +310,7 @@
+   <!-- CONTACT -->
+   <div class="contact-block">
+     <p><strong>Questions about sponsorship?</strong></p>
+-    <p>Contact Amy L. Taylor · <a href="tel:2819482495">281.948.2495</a> · <a href="mailto:golf@declaration.org">golf@declaration.org</a></p>
++    <p>Contact Amy L. Taylor · <a href="tel:2819482495">281.948.2495</a> · <a href="mailto:info@reachcharitygolf.org">info@reachcharitygolf.org</a></p>
+   </div>
+ 
+ </div>
+-- 
+2.43.0
+
